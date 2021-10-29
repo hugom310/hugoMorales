@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
+    <title>grupo 3</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/miEstilo.css') }}"
+  />
+    
+</head>
+<body>
+
+
+    <header>
+        <a href="{{ url_for('principal')}}" style="text-decoration: none;"><h1  id="uno"> 
+        <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="plataforma2" id="dos" > Plataforma E-commerce <br>Grupo 3</h1></a>
+        
+     
+        
+        <nav class="login">
+       
+            <a href="{{ url_for('login')}}" id="cinco">Iniciar Sesion</a>
+            <a href="{{ url_for('register')}}" id="cinco">Registrarse</a>
+            <a href='/deseo/list' title="Lista de deseo" id="lista">
+                <img src="{{ url_for('static', filename='images/pngegg.png') }}" alt="Lista de deseo" id="carro2" >
+              </a>
+        </nav>
+        <form 
+        action="{{url_for('principal')}}" 
+        name=" formBusqueda" class="busqueda"
+        method="POST"
+        onsubmit="buscarPor();">
+            <input type="text" placeholder="Buscar Productos" maxlength="120" id="busqueda_input" name="busqueda_input">
+            <button type="submit" value="Enviar" id="enviar">Buscar</button>
+        </form>
+
+    </header>   
+    <nav id="nueve">
+        <a href="{{ url_for('principal')}}" class="nav_anlace">Inicio</a>
+        <a href="{{ url_for('SeccionEmpleados')}}" class="nav_anlace">Seccion Empleados</a>
+        <a href="{{ url_for('gestionarProductos')}}" class="nav_anlace">Gestionar Productos</a>
+        <a href="{{ url_for('contacto')}}"class="nav_anlace">Contactenos</a>
+    </nav>
+    <section>
+    <nav id="cuatro">
+       <a href="{{ url_for('articulo1')}}" > <img src="{{ url_for('static', filename='images/producto1.png') }}" alt="Producto1" id="tres" ></a>
+        <a href="{{ url_for('articulo1')}}" id="seis"><p>Descripcion del producto 1</p></a>
+    </nav>
+    <nav id="cuatro">
+       <a href="{{ url_for('articulo2')}}"> <img src="{{ url_for('static', filename='images/producto2.png') }}" alt="Producto2" id="tres" ></a>
+        <a href="{{ url_for('articulo2')}}" id="seis"><p>Descripcion del producto 2</p></a>
+    </nav>
+    <nav id="cuatro">
+        <a href="{{ url_for('articulo3')}}"> <img src="{{ url_for('static', filename='images/producto3.png') }}" alt="Producto3" id="tres" ></a>
+         <a href="{{ url_for('articulo3')}}" id="seis"><p>Descripcion del producto 3</p></a>
+     </nav>
+
+</section>
+<div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__p">
+            &copy; Copyright 2021 <a href="#"> Grupo 3 Uninorte</a>
+        </p>
+    </footer>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+h1 {
+    color: #377ba8;
+    text-align: center;
+    
+  }
+
+
+  form {
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #ccc;
+    
+  }
+  
+  form input {
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    margin: 8px 10px;
+    display: inline-block;
+  }
+  
+  button {
+    text-align: center;
+    font-weight: bold;
+  }
+  #uno{
+    text-align: center;
+    color: #f8f8f8;
+    font-size: 0.9cm;
+}
+#dos{
+    width: 3cm;
+    margin: 0px;
+    float: left;
+    box-shadow: 10px;
+    
+}
+
+header{
+    
+    margin: 0px;
+    width: 50cm;
+    height: 4cm;
+    padding: 0.2px;
+    background-color: rgb(48, 12, 133);
+    
+}
+#cinco{
+    border: 1px solid rgba(98, 0, 255, 0.74);
+    text-decoration: none;
+    padding: 5px;
+    background-color: rgb(153, 147, 180);
+    color:rgb(0, 0, 0);
+    box-shadow: 1px 0 5px -5px rosybrown;
+    font-weight: bold;
+    display: inline-block;
+    
+}
+#carro2{
+    
+    
+    left: 1830px;
+    margin-right: 10px;
+    width: 1cm;
+}
+
+.login{
+    position: relative;
+    top: -20px;
+    margin-right: 20px;
+}
+#nueve{
+    background:rgb(76, 34, 145) ;
+    margin: -1px ;
+    text-align: center;
+    
+    height: 1.1cm;
+}
+#cinco:hover{
+    background: rgb(211, 247, 234);
+}
+
+.nav_anlace{
+    background: aqua;
+    background-color: rgb(153, 147, 180) ;
+    color: rgb(0, 0, 0);
+    border: 1px solid blue;
+    text-decoration: none;
+    padding: 10px 30px;
+    box-shadow: 1px 0 5px -5px rosybrown;
+    font-weight: bold;
+    display: inline-block;
+}
+.nav_anlace:hover{
+    background: rgb(211, 247, 234);
+
+}

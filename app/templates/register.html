@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
+    <title>Formulario de registro</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/estilo2.css') }}"
+    />
+  </head>
+  <body>
+    <section class="content">
+      {% for message in get_flashed_messages() %}
+      <div class="flash">{{ message }}</div>
+      {% endfor %}
+    </section>
+    <header>
+      <a href="{{ url_for('principal')}}" style="text-decoration: none;"><h1  id="uno"> 
+      <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="plataforma2" id="dos" > Plataforma E-commerce <br>Grupo 3</h1></a>
+      
+
+    </header>   
+    <nav id="nueve">
+    <a href="{{ url_for('principal')}}" class="nav_anlace">Inicio</a>
+    <a href="{{ url_for('SeccionEmpleados')}}" class="nav_anlace">Seccion Empleados</a>
+    <a href="{{ url_for('gestionarProductos')}}" class="nav_anlace">Gestionar Productos</a>
+    <a href="{{ url_for('contacto')}}"class="nav_anlace">Contactenos</a>
+    </nav>
+
+    <h1>Registro en Plataforma</h1>
+
+
+    <form
+      action="{{ url_for('register')}}"
+      method="POST"
+      name="formRegistro"
+      onSubmit="validar_formulario();"
+    >
+      <p>Nombre: <input type="text" id="nombre" name="nombre" /></p>
+
+      <p>
+        Usuario:
+        <input type="text" id="username" name="username" />
+      </p>
+
+      <p>
+        Sexo: <input type="radio" id="sexo" name="sexo" value="h" /> hombre
+        <input type="radio" name="sexo" id="sexo" value="m" /> mujer
+      </p>
+
+      <p>
+        Correo: <input type="text" id="correo" name="correo" maxlength="100" />
+      </p>
+
+      <p>
+        Contraseña:
+        <input type="password" id="password" name="password" />
+        <img
+          src="{{ url_for('static', filename='images/view.png') }}"
+          onmouseover="mostrarPassword();"
+          onmouseout="ocultarPassword();"
+        />
+      </p>
+      <p>
+        Repetir Contraseña:
+        <input type="password" id="password2" name="password2" />
+        <img
+          src="{{ url_for('static', filename='images/view.png') }}"
+          onmouseover="mostrarPassword2();"
+          onmouseout="ocultarPassword2();"
+        />
+      </p>
+
+      <p>
+        <input type="checkbox" name="condiciones" /> Declaro haber leido y
+        acepto las condiciones generales del programa y la normativa sobre
+        protección de datos
+      </p>
+
+      <button type="submit" value="Enviar">Enviar</button>
+    </form>
+  </body>
+</html>

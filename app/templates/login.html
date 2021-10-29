@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/estilo2.css')}} "
+    />
+    <script src="{{ url_for('static', filename='js/validacion.js')}}"></script>
+    <style>  
+        img{
+            height: 2em;
+        }
+    </style>
+  </head>
+  <body>
+    <section class="content">
+      {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+      {% endfor %}
+    </section>
+    <header>
+      <a href="{{ url_for('principal')}}" style="text-decoration: none;"><h1  id="uno"> 
+      <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="plataforma2" id="dos" > Plataforma E-commerce <br>Grupo 3</h1></a>
+      
+
+  </header>   
+  <nav id="nueve">
+    <a href="{{ url_for('principal')}}" class="nav_anlace">Inicio</a>
+    <a href="{{ url_for('SeccionEmpleados')}}" class="nav_anlace">Seccion Empleados</a>
+    <a href="{{ url_for('gestionarProductos')}}" class="nav_anlace">Gestionar Productos</a>
+    <a href="{{ url_for('contacto')}}"class="nav_anlace">Contactenos</a>
+  </nav>
+    <h1>Iniciar Sesión</h1>
+    <form name="loginForm" method="POST" action="{{ url_for('login')}}">
+      <div>
+        <label for="username">Usuario: </label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="password">Contraseña: </label>
+        <input type="password" name="password" id="password" />
+        <img
+          src="{{ url_for('static',filename='images/view.png')}}"
+          onmouseover="mostrarPassword()"
+          onmouseout="ocultarPassword()"
+        />
+      </div>
+      <div>
+        <input type="submit" value="Iniciar Sesion" />
+      </div>
+    </form>
+      <div style="text-align: center">
+          <a href="/contacto"> Contactenos</a>
+      </div>
+  </body>
+</html>

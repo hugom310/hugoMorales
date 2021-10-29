@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articulo 1</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/miEstilo.css') }}"
+     />
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('principal')}}" style="text-decoration: none;"><h1  id="uno"> 
+        <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="plataforma2" id="dos" > Plataforma E-commerce <br>Grupo 3</h1></a>
+        
+     
+        
+        <nav class="login">
+       
+            <a href="{{ url_for('login')}}" id="cinco">Iniciar Sesion</a>
+            <a href="{{ url_for('register')}}" id="cinco">Registrarse</a>
+            <a href="#" title="Lista de deseo" id="lista">
+                <img src="{{ url_for('static', filename='images/pngegg.png') }}" alt="Lista de deseo" id="carro2">
+              </a>
+        </nav>
+        <form 
+        action="{{url_for('principal')}}" 
+        name=" formBusqueda" class="busqueda"
+        method="POST"
+        onsubmit="buscarPor();">
+            <input type="text" placeholder="Buscar Productos" maxlength="120" id="busqueda_input" name="busqueda_input">
+            <button type="submit" value="Enviar" id="enviar">Buscar</button>
+        </form>
+
+    </header>
+    <nav id="nueve">
+        <a href="{{ url_for('principal')}}" class="nav_anlace">Inicio</a>
+        <a href="{{ url_for('SeccionEmpleados')}}" class="nav_anlace">Seccion Empleados</a>
+        <a href="{{ url_for('gestionarProductos')}}" class="nav_anlace">Gestionar Productos</a>
+        <a href="{{ url_for('contacto')}}"class="nav_anlace">Contactenos</a>
+    </nav>
+    
+    <section>
+        <div>
+            <img src="{{ url_for('static', filename='images/producto1.png') }}" alt="producto1">
+            <h2>Caracteristicas</h2>
+            <table>
+               <tr>
+                    <th>marca</th>
+                    <td>Marca1</td>
+               </tr>
+               <tr>
+                <th>Modelo</th>
+                <td>Modelo1</td>
+           </tr>
+            </table>
+            <h2>Descripcion</h2>
+            <article>Fitted: Pegado a la piel, pero sin apretar <br>
+                El polar con mezcla de aLodón es ligero y sumamente suave <br>
+                El interior suave y afelpado atrapa el calor <br>
+                Pretina acanalada con cordón de ajuste externo <br>
+                Bolsillos abiertos para las manos <br>
+                Puños acanalados <br>
+                Tiro: 10 60 cm (más o menos 8 cm por talla) <br>
+                80% Cotton/20% Polyester <br>
+                Importado <br>
+                </article>
+            
+        </div>
+
+    </section>
+    <aside>
+        <h2>Descripcion completa Producto 1  </h2>
+        <h3>$ Precio</h3>
+        <p>Talla:</p>
+        <p>Peso:</p>
+        <p> Cantidad Disponible: # unidades</p>
+        <a type="button"  onmouseover="href='/deseo/list'" name="producto1"  >Agregar a lista de deseos</a>
+    </aside>
+    <div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer__p">
+                &copy; Copyright 2021 <a href="#"> Grupo 3 Uninorte</a>
+            </p>
+        </footer>
+    </div>
+
+
+</body>
+</html>

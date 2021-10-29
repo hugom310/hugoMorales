@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href ="{{ url_for('static', filename='css/estilo2.css')}}"
+    <title>Document - {% block title %} {% endblock %}</title>
+  </head>
+<body>
+    <header>
+        <a href="{{ url_for('principal')}}" style="text-decoration: none;"><h1  id="uno"> 
+        <img src="{{ url_for('static', filename='images/logo1.jpg') }}" alt="plataforma2" id="dos" > Plataforma E-commerce <br>Grupo 3</h1></a>
+        
+  
+    </header>   
+    <nav id="nueve">
+      <a href="{{ url_for('principal')}}" class="nav_anlace">Inicio</a>
+      <a href="{{ url_for('SeccionEmpleados')}}" class="nav_anlace">Seccion Empleados</a>
+      <a href="{{ url_for('gestionarProductos')}}" class="nav_anlace">Gestionar Productos</a>
+      <a href="{{ url_for('contacto')}}"class="nav_anlace">Contactenos</a>
+    </nav>
+{% with messages = get_flashed_messages() %} 
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+               <li style="font-size: 30px; color: white; background: red">
+                        {{ message }}
+                 </li>
+            <li>{% endfor %}</li>
+        </ul>
+    {% endif %}    
+{% endwith %}    
+
+    {% block content %} 
+
+    {% endblock %}
+
+  
+    <script src="{{ url_for('static', filename='js/validacion.js')}}"></script>
+  </body>
+</html>
